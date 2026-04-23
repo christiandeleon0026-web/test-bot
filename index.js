@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // Replace this with your actual link from MongoDB
 const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI)
-  .then(() => console.log('✅ Connected to World Savers Database!'))
+  .then(() => console.log('✅ Connected to Violet Database!'))
   .catch(err => console.error('❌ Database Connection Error:', err));
 
 const counterSchema = new mongoose.Schema({
@@ -52,7 +52,7 @@ async function getNextTicketNumber() {
 
 // ✅ BOT READY
 client.once("clientReady", () => {
-  console.log(`✅ ${client.user.tag} is Online and ready for World Savers!`);
+  console.log(`✅ ${client.user.tag} is Online and ready for violet!`);
 });
 
 // 👋 WELCOME MESSAGE SYSTEM
@@ -63,7 +63,7 @@ client.on('guildMemberAdd', async (member) => {
     // Log it after fetching so you can see the real link in Render
     console.log(`User: ${member.user.tag} | Avatar URL: ${member.user.displayAvatarURL({ extension: 'png' })}`);
 
-    const welcomeChannelID = '1494251461788565504'; 
+    const welcomeChannelID = '1496844901382492201'; 
     const channel = member.guild.channels.cache.get(welcomeChannelID);
 
     if (!channel)
@@ -71,7 +71,7 @@ client.on('guildMemberAdd', async (member) => {
 
     const welcomeEmbed = new EmbedBuilder()
         .setAuthor({
-            name: `Welcome to World Savers!`,
+            name: `Welcome to Violet!`,
             iconURL: member.guild.iconURL(),
         })
         .setTitle(`✨ NEW MEMBER ✨`)
@@ -80,13 +80,13 @@ client.on('guildMemberAdd', async (member) => {
         .setDescription(
             `### Hello, ${member}!\n` +
             `We're glad to have you here. Follow these steps to get started:\n\n` +
-            `📜 **STEP 1**\nRead the rules in <#1494251438472167504>\n\n` +
-            `📩 **STEP 2**\nApply for Crew in <#1494198712321310741>\n\n` +
+            `📜 **STEP 1**\nRead the rules in <#1494890673734680778>\n\n` +
+            `📩 **STEP 2**\nApply for Crew in <#1495949406850121768>\n\n` +
             `🚩 *Make sure to follow the instructions carefully!*`,
         )
-        .setColor("#ffffff")
+        .setColor("#8F00FF")
         .setImage(
-            "https://cdn.discordapp.com/attachments/1494251461788565504/1494265381269930044/standard_4_1.gif",
+            "https://media.discordapp.net/attachments/1420357526406430824/1496847734051701008/standard_5.gif?ex=69eb5f95&is=69ea0e15&hm=9956a40f08c6881922c26769f4ebaaf224494d93f901ab948776c93f730b9fb2&=&width=550&height=194",
         )
         .setFooter({
             text: `You are our ${member.guild.memberCount}th member!`,
@@ -95,7 +95,7 @@ client.on('guildMemberAdd', async (member) => {
         .setTimestamp();
 
     await channel.send({
-        content: `Welcome to the server, ${member}! 🌊`,
+        content: `Welcome to the Violet, ${member}! 🌊`,
         embeds: [welcomeEmbed],
     }).catch(console.error); // Catch errors to prevent crashes
 });
@@ -106,12 +106,12 @@ client.on("messageCreate", async (message) => {
 
   // 📢 Revive Chat (Keep command, delete bot ping)
   if (message.content === '!revive-chat') {
-    const generalChannelID = '1493419661151305961'; 
+    const generalChannelID = '1494936734373380116'; 
     const generalChannel = message.guild.channels.cache.get(generalChannelID);
 
     if (generalChannel) {
       // 1. Bot sends the ping to General
-      generalChannel.send('<@&1494352433604726995>').then(botPing => {
+      generalChannel.send('<@&1495947230660788224>').then(botPing => {
         // 2. Bot deletes ITS OWN ping immediately
         botPing.delete().catch(() => {});
       });
