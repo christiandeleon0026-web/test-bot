@@ -276,8 +276,9 @@ client.on("interactionCreate", async (interaction) => {
     (interaction.customId === "ticket_menu" ||
       interaction.customId === "apply_menu")
   ) {
-    await interaction.update({ components: interaction.message.components });
-
+if (!interaction.deferred && !interaction.replied) {
+    await interaction.deferUpdate().catch(() => {});
+}
     const type = interaction.values[0];
 
     try {
