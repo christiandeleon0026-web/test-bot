@@ -4,8 +4,7 @@ const fs = require("fs");
 const mongoose = require('mongoose');
 
 // Replace this with your actual link from MongoDB
-const mongoURI = "mongodb+srv://admin:p@ssw0rd@cluster0.8g5nky3.mongodb.net/?appName=Cluster0";
-
+const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI)
   .then(() => console.log('✅ Connected to World Savers Database!'))
   .catch(err => console.error('❌ Database Connection Error:', err));
@@ -282,7 +281,7 @@ client.on("interactionCreate", async (interaction) => {
     const type = interaction.values[0];
 
     try {
-    const ticketNumber = await getNextTicketNumber(interaction.guild);
+const ticketNumber = await getNextTicketNumber();
       
       const channel = await interaction.guild.channels.create({
         name: `ticket-${ticketNumber}`,
