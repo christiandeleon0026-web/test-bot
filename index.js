@@ -51,7 +51,7 @@ async function getNextTicketNumber() {
 }
 
 // ✅ BOT READY
-client.once("ready", () => {
+client.once("clientReady", () => {
   console.log(`✅ ${client.user.tag} is Online and ready for World Savers!`);
 });
 
