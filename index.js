@@ -136,7 +136,7 @@ client.on("messageCreate", async (message) => {
       )
       .setColor("#ffffff")
       .setImage(
-        "https://media.discordapp.net/attachments/1420357526406430824/1496847734051701008/standard_5.gif?ex=69eb5f95&is=69ea0e15&hm=9956a40f08c6881922c26769f4ebaaf224494d93f901ab948776c93f730b9fb2&=&width=550&height=194",
+        "https://cdn.discordapp.com/attachments/1420357526406430824/1496852831926358066/standard_6.gif?ex=69eb6455&is=69ea12d5&hm=7c990175cd6f1ce806e34c469eff96a7b539b0d8d977dbc34defc809fd6a3030&",
       )
       .setFooter({
         text: "V I O L E T • Your satisfaction is our priority",
