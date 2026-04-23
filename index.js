@@ -394,3 +394,9 @@ process.on("uncaughtException", (err, origin) => {
     console.log(' [Anti-Crash] Uncaught Exception/Catch');
     console.log(err, origin);
 });
+
+process.on('SIGINT', async () => {
+    await mongoose.connection.close();
+    console.log("🛑 MongoDB connection closed due to bot shutdown.");
+    process.exit(0);
+});
