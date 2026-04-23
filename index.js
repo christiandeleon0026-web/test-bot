@@ -370,9 +370,7 @@ client.on("interactionCreate", async (interaction) => {
   }
 });
 
-client.login(
-  "MTQ5Mzk4MjQwNDcyODMyODI3Mw.GWVEbx.vOds_ULzeHu1DUnIP42X6Zpv8jDLn-KeyUyI7I",
-);
+client.login(process.env.TOKEN);
 
 process.on('unhandledRejection', (reason, p) => {
     console.log(' [Anti-Crash] Unhandled Rejection/Catch');
