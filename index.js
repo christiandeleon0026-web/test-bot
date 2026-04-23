@@ -134,7 +134,7 @@ client.on("messageCreate", async (message) => {
           "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
           "*Click the dropdown below to get started!*",
       )
-      .setColor("#ffffff")
+      .setColor("#8F00FF")
       .setImage(
         "https://cdn.discordapp.com/attachments/1420357526406430824/1496852831926358066/standard_6.gif?ex=69eb6455&is=69ea12d5&hm=7c990175cd6f1ce806e34c469eff96a7b539b0d8d977dbc34defc809fd6a3030&",
       )
@@ -177,7 +177,7 @@ client.on("messageCreate", async (message) => {
   if (message.content === "!setup-application") {
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "World Savers Support System",
+        name: "Violet Support System",
         iconURL: client.user.displayAvatarURL(),
       })
       .setTitle("**📩 Crew Application**")
@@ -189,12 +189,12 @@ client.on("messageCreate", async (message) => {
           "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
           "*Click the dropdown below to get started!*",
       )
-      .setColor("#ffffff")
+      .setColor("#8F00FF")
       .setImage(
         "https://media.discordapp.net/attachments/1420357526406430824/1493996540451098755/standard_1_1.gif",
       )
       .setFooter({
-        text: "World Savers • Your satisfaction is our priority",
+        text: "V I O L E T • Your satisfaction is our priority",
         iconURL: client.user.displayAvatarURL(),
       });
 
@@ -223,37 +223,33 @@ client.on("messageCreate", async (message) => {
   if (message.content === "!setup-rules") {
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "World Savers Official Rules",
+        name: "Violet Official Rules",
         iconURL: client.user.displayAvatarURL(),
       })
       .setTitle("**📜 Server & Crew Guidelines**")
       .setDescription(
-        "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
-          "### 🌍 **Server Rules:**\n" +
-          "1. Do not break Discord or Roblox Terms of Service.\n" +
-          "2. Be respectful. Arguments should take place in DMs only.\n" +
-          "3. Spamming/Spam-pinging is a bannable offense.\n" +
-          "4. No blackmailing or harassing others.\n" +
-          "5. No advertising in DMs or server channels.\n" +
-          "6. Hate speech, racism, or extremism will not be tolerated.\n" +
-          "7. Toxicity is strictly prohibited.\n" +
-          "8. Bypassing slurs results in an immediate ban.\n\n" +
-          "### 🏴‍☠️ **World Savers Crew Rules:**\n" +
-          "1 | Do not leak any crew information.\n" +
-          "2 | Failure to complete your quota will result in a kick.\n" +
-          "3 | No leaking personal info or flaming crew members.\n" +
-          "4 | Trolling or ragebaiting crewmates will result in strikes.\n" +
-          "5 | Do not attack crewmates/allies without permission.\n" +
-          "6 | DM the Captain or Admin for any questions.\n\n" +
+          "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
+          "1. No bullying allowed\n" +
+          "2. If you have some shit to say about someone, keep it to yourself (UNLESS UR DEFENDING SOMEONE)\n" +
+          "3. No spamming.\n" +
+          "4. No talking about watashi ruby or black marketing\n" +
+          "5. No Bad slurs like the hard R, or any racist things\n" +
+          "6. No Inappropriate language\n" +
+          "7. No jokes about 9/11 or cancer etc.\n" +
+          "8. No harassing anybody\n" +
+          "9. No toxicity\n" +
+          "10. **LISTEN TO THE HIGHER UPS.**\n" +
+          "11. **DONT ATTACK ALLIES** or start fights with other people from allied crews\n\n" +
           "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
-          "*By staying in this server, you agree to follow these rules.*",
+          "*Doing any of these will get you timed out, muted, or warned.*\n" +
+          "**Thank you!**",
       )
-      .setColor("#ffffff")
+      .setColor("#8F00FF")
       .setImage(
         "https://media.discordapp.net/attachments/1494251438472167504/1494256613090000957/standard_2_1.gif?ex=69e1f26a&is=69e0a0ea&hm=17423eaba3561d88d0cfff1fe9bc92299c89aba7463c1c527f846b2c01ab5381&=",
       )
       .setFooter({
-        text: "World Savers • Safety and Respect first",
+        text: "Violet • Safety and Respect first",
         iconURL: client.user.displayAvatarURL(),
       });
 
