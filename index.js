@@ -289,7 +289,7 @@ const ticketNumber = await getNextTicketNumber();
       const channel = await interaction.guild.channels.create({
         name: `ticket-${ticketNumber}`,
         type: ChannelType.GuildText,
-        parent: "1496847295218450492", // ✅ UPDATED CATEGORY ID
+        parent: "1494027527427981352", // ✅ UPDATED CATEGORY ID
         permissionOverwrites: [
           {
             id: interaction.guild.id,
