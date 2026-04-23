@@ -40,7 +40,7 @@ function getNextTicketNumber() {
 
 // ✅ BOT READY
 client.once("ready", () => {
-  console.log(`✅ ${client.user.tag} is Online and ready for World Savers`);
+  console.log(`✅ ${client.user.tag} is Online and ready for World Savers!`);
 });
 
 // 👋 WELCOME MESSAGE SYSTEM
