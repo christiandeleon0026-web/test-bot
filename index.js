@@ -16,7 +16,13 @@ const counterSchema = new mongoose.Schema({
 const Counter = mongoose.model('Counter', counterSchema);
 
 // Keeps the bot alive on Render
-http.createServer((req, res) => res.end("Bot is running!")).listen(8080);
+const PORT = process.env.PORT || 8080;
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end("Bot is running!");
+}).listen(PORT, () => {
+  console.log(`✅ Web server is listening on port ${PORT}`);
+});
 
 const {
   Client,
