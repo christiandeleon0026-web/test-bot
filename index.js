@@ -107,7 +107,7 @@ client.on("messageCreate", async (message) => {
   }
 
   // Ticket Setup
-  if (message.content === "?setup-ticket") {
+  if (message.content === "!setup-ticket") {
     const embed = new EmbedBuilder()
       .setAuthor({
         name: "World Savers Support System",
@@ -162,7 +162,7 @@ client.on("messageCreate", async (message) => {
   }
 
   // Application Setup
-  if (message.content === "?setup-apply") {
+  if (message.content === "!setup-application") {
     const embed = new EmbedBuilder()
       .setAuthor({
         name: "World Savers Support System",
@@ -208,7 +208,7 @@ client.on("messageCreate", async (message) => {
   }
 
   // Rules Setup Command
-  if (message.content === "?setup-rules") {
+  if (message.content === "!setup-rules") {
     const embed = new EmbedBuilder()
       .setAuthor({
         name: "World Savers Official Rules",
