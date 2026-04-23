@@ -25,7 +25,7 @@ const client = new Client({
   ],
 });
 
-/ ✅ FIXED COUNTER LOGIC (Scans Discord instead of using a file)
+// ✅ FIXED COUNTER LOGIC (Scans Discord instead of using a file)
 async function getNextTicketNumber(guild) {
     const channels = await guild.channels.fetch();
     const ticketChannels = channels.filter(c => c.name.includes('-'));
