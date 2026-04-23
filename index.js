@@ -264,7 +264,7 @@ client.on("messageCreate", async (message) => {
     }); // This deletes your "!setup-rules" message to keep it clean
   }
 
-  if (message.content === "?test-join") {
+  if (message.content === "!test-join") {
     client.emit("guildMemberAdd", message.member);
   }
 });
