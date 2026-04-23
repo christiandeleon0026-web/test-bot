@@ -122,24 +122,24 @@ client.on("messageCreate", async (message) => {
   if (message.content === "!setup-ticket") {
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "World Savers Support System",
+        name: "Violet Support System",
         iconURL: client.user.displayAvatarURL(),
       })
-      .setTitle("✨ WORLD SAVERS Ticket's ✨")
+      .setTitle("✨ VIOLET Ticket's ✨")
       .setThumbnail(client.user.displayAvatarURL())
       .setDescription(
         "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
-          "**Welcome to the World Savers Support System!**\n\n" +
+          "**Welcome to the Violet Support System!**\n\n" +
           "Please select an option from the dropdown menu below to create a ticket.\n\n" +
           "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n" +
           "*Click the dropdown below to get started!*",
       )
       .setColor("#ffffff")
       .setImage(
-        "https://media.discordapp.net/attachments/1420357526406430824/1493996540451098755/standard_1_1.gif",
+        "https://media.discordapp.net/attachments/1420357526406430824/1496847734051701008/standard_5.gif?ex=69eb5f95&is=69ea0e15&hm=9956a40f08c6881922c26769f4ebaaf224494d93f901ab948776c93f730b9fb2&=&width=550&height=194",
       )
       .setFooter({
-        text: "World Savers • Your satisfaction is our priority",
+        text: "V I O L E T • Your satisfaction is our priority",
         iconURL: client.user.displayAvatarURL(),
       });
 
