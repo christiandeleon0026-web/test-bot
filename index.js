@@ -1,5 +1,21 @@
 const http = require("http");
 const fs = require("fs");
+
+const mongoose = require('mongoose');
+
+// Replace this with your actual link from MongoDB
+const mongoURI = "mongodb+srv://admin:p@ssw0rd@cluster0.8g5nky3.mongodb.net/?appName=Cluster0";
+
+mongoose.connect(mongoURI)
+  .then(() => console.log('✅ Connected to World Savers Database!'))
+  .catch(err => console.error('❌ Database Connection Error:', err));
+
+const counterSchema = new mongoose.Schema({
+  id: String,
+  seq: { type: Number, default: 0 }
+});
+const Counter = mongoose.model('Counter', counterSchema);
+
 // Keeps the bot alive on Render
 http.createServer((req, res) => res.end("Bot is running!")).listen(8080);
 
@@ -25,21 +41,14 @@ const client = new Client({
   ],
 });
 
-// ✅ FIXED COUNTER LOGIC (Scans Discord instead of using a file)
-async function getNextTicketNumber(guild) {
-    const channels = await guild.channels.fetch();
-    const ticketChannels = channels.filter(c => c.name.includes('-'));
-    
-    let highestNumber = 0;
-    ticketChannels.forEach(channel => {
-        const parts = channel.name.split('-');
-        const num = parseInt(parts[parts.length - 1]);
-        if (!isNaN(num) && num > highestNumber) {
-            highestNumber = num;
-        }
-    });
-
-    return highestNumber + 1;
+// ✅ DATABASE COUNTER (Lives in the cloud, never resets to 1)
+async function getNextTicketNumber() {
+    let counter = await Counter.findOneAndUpdate(
+        { id: 'ticket_counter' },
+        { $inc: { seq: 1 } },
+        { new: true, upsert: true }
+    );
+    return counter.seq;
 }
 
 // ✅ BOT READY
