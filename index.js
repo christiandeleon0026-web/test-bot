@@ -289,7 +289,7 @@ const ticketNumber = await getNextTicketNumber();
       const channel = await interaction.guild.channels.create({
         name: `ticket-${ticketNumber}`,
         type: ChannelType.GuildText,
-        parent: "1494027527427981352", // ✅ UPDATED CATEGORY ID
+        parent: "1496847295218450492", // ✅ UPDATED CATEGORY ID
         permissionOverwrites: [
           {
             id: interaction.guild.id,
@@ -306,9 +306,9 @@ const ticketNumber = await getNextTicketNumber();
         ],
       });
 
-      const captainID = '1494000597312208896';
-      const viceCaptainID = '1494000633416515604';
-      const adminID = '1494000663267508396';
+      const captainID = '1494301872918499348';
+      const viceCaptainID = '1494301699051884544';
+      const adminID = '1493733880262561822';
       const pings = `<@&${captainID}> <@&${viceCaptainID}> <@&${adminID}>`;
 
       const closeRow = new ActionRowBuilder().addComponents(
