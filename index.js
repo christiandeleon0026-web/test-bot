@@ -25,16 +25,21 @@ const client = new Client({
   ],
 });
 
-// Counter Logic
-const dataPath = "./data.json";
-function getNextTicketNumber() {
-  if (!fs.existsSync(dataPath)) {
-    fs.writeFileSync(dataPath, JSON.stringify({ count: 0 }));
-  }
-  const data = JSON.parse(fs.readFileSync(dataPath));
-  data.count += 1;
-  fs.writeFileSync(dataPath, JSON.stringify(data));
-  return data.count;
+// ✅ NEW: Scans channels to find the next number
+async function getNextTicketNumber(guild) {
+    const channels = await guild.channels.fetch();
+    const ticketChannels = channels.filter(c => c.name.includes('-'));
+    let highestNumber = 0;
+
+    ticketChannels.forEach(channel => {
+        const parts = channel.name.split('-');
+        const num = parseInt(parts[parts.length - 1]);
+        if (!isNaN(num) && num > highestNumber) {
+            highestNumber = num;
+        }
+    });
+
+    return highestNumber + 1;
 }
 
 // ✅ BOT READY
